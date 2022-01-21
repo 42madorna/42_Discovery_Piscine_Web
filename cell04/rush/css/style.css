@@ -1,14 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
+	--muted-text: #838383;
+	--general-text: #292929;
+	--dark-text: #f0efef;
+	--general-background: #dfdfdf;
 	--shadow: #3d3d3d;
+	--input-background: #ffffff;
+	--navbar-background: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--muted-text: #838383;
+		--general-text: #f0efef;
+		--general-background: #323232;
+		--shadow: #181818;
+		--input-background: #0e0e0e;
+		--navbar-background: #000000;
+	}
 }
 
 * {
 	font-family: 'Ubuntu';
+	color: var(--general-text);
 }
 
-html, body {
+html,
+body {
+	background: var(--general-background);
 	margin: 0;
 	padding: 0;
 	min-height: 100%;
@@ -17,7 +37,7 @@ html, body {
 }
 
 nav {
-	background: #000;
+	background: var(--navbar-background);
 	width: 100%;
 	height: 75px;
 	display: flex;
@@ -43,35 +63,95 @@ nav ul li a {
 	color: #fafafa;
 }
 
-ul li {
+nav ul li {
 	display: inline;
 }
 
 .content {
 	min-width: 100%;
 	min-height: 100%;
-	height: 150%;
 	width: 100%;
-	background: chartreuse;
 	margin-top: 75px;
-}
-
-section {
-	height: 30%;
-	background: cornflowerblue;
 }
 
 footer {
 	width: 100%;
 	height: 100px;
-	background: coral;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	color: #ffffff;
 }
 
-nav img {
+footer p {
+	margin-right: 50px;
+}
+
+nav a img {
 	margin-left: 25px;
 	height: 50px;
+	cursor: pointer;
+}
+
+#section__first {
+	padding: 50px 0;
+}
+
+#section__first div.photo {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-position: center;
+	background-image: url('https://static3.lasprovincias.es/www/multimedia/202112/12/media/cortadas/gatos-kb2-U160232243326NVC-1248x770@Las%20Provincias.jpg');
+	background-size: cover;
+	margin: 0px auto;
+	border: 1px solid black;
+}
+
+#section__first h1,
+#section__first h3 {
+	text-align: center;
+}
+
+#section__second {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+}
+
+#section__second div {
+	padding: 20px 50px;
+}
+
+.material-icons {
+	font-size: 5em !important;
+}
+
+#section__third {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+#section__third a {
+	text-decoration: none;
+}
+
+#section__third a div p {
+	text-align: center;
+}
+
+#section__third a:hover div p {
+	color: crimson;
+}
+
+#section__third a:hover div span {
+	color: lightseagreen;
+}
+
+section + h3 {
+	margin: 100px;
+	text-align: center;
 }
