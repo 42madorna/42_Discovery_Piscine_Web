@@ -1,10 +1,46 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	min-height: 100%;
+	height: 100%;
+	scroll-behavior: smooth;
 }
 
 nav {
-	background-color: aqua;
+	background: aqua;
 	width: 100%;
 	height: 75px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: fixed;
+	top: 0;
+}
+
+ul li {
+	display: inline;
+}
+
+.content {
+	min-width: 100%;
+	min-height: 100%;
+	height: 150%;
+	width: 100%;
+	background: chartreuse;
+	margin-top: 75px;
+}
+
+section {
+	height: 30%;
+	background: cornflowerblue;
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	background: coral;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: #ffffff;
 }
