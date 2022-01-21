@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Balloon</title>
+	<style>
+		.div__balloon {
+			width: 200px;
+			height: 200px;
+			background-color: #ff0000;
+			border-radius: 50%;
+		}
+	</style>
+	<script>
+		window.onload = () => {
+			const balloon = document.getElementsByClassName("div__balloon")[0]
+			balloon.style.backgroundColor = '#ff0000'
+
+			const backToDefaults = () => {
+				balloon.style.width = '200px'
+				balloon.style.height = '200px'
+			}
+
+			balloon.onclick = () => {
+				const nextColor = {
+					'rgb(255, 0, 0)': '#00ff00',
+					'rgb(0, 255, 0)': '#0000ff',
+					'rgb(0, 0, 255)': '#ff0000'
+				}
+
+				balloon.style.width = `${balloon.offsetWidth + 10}px`
+				balloon.style.height = `${balloon.offsetHeight + 10}px`
+				balloon.style.backgroundColor = nextColor[balloon.style.backgroundColor]
+				if (balloon.offsetWidth > 420)
+					backToDefaults()
+			}
+
+			balloon.addEventListener('mouseleave', e => {
+				const prevColor = {
+					'rgb(255, 0, 0)': '#0000ff',
+					'rgb(0, 0, 255)': '#00ff00',
+					'rgb(0, 255, 0)': '#ff0000'
+				}
+
+				if (balloon.offsetWidth > 200)
+				{
+					balloon.style.width = `${balloon.offsetWidth - 5}px`
+					balloon.style.height = `${balloon.offsetHeight - 5}px`
+					balloon.style.backgroundColor = prevColor[balloon.style.backgroundColor]
+				}
+			})
+		}
+	</script>
+</head>
+<body>
+	<div class="div__balloon"></div>
+</body>
+</html>

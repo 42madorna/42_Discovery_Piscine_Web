@@ -1,0 +1,22 @@
+table {
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: left;
+	table-layout: fixed;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.first {
+	border-right: 1px solid gray;
+	background-color: powderblue;
+}
+.second {
+	background-color: peru;
+}
