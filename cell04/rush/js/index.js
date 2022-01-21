@@ -9,3 +9,14 @@ window.addEventListener('load', () => {
 		})
 	})
 })
+
+window.addEventListener('hashchange', (e) => {
+	const tabs = {
+		'#norminet': 'norminette',
+		'#perrete': 'perrette'
+	}
+	document.querySelectorAll('.content').forEach((element) => {
+		element.style.visibility = 'hidden'
+	})
+	document.getElementById(tabs[location.hash]).style.visibility = 'visible';
+})
