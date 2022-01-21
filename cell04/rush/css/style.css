@@ -144,8 +144,11 @@ nav a img {
 	text-decoration: none;
 }
 
-#section__third a div p {
+#section__third a div p,
+#section__third a div span,
+#section__third a div svg  {
 	text-align: center;
+	transition: .5s cubic-bezier(0.43, 0.21, 0.96, -0.1);
 }
 
 #section__third a:hover div p,
