@@ -61,15 +61,11 @@ nav {
 nav ul li a {
 	margin-right: 25px;
 	text-decoration: none;
+	color: #fafafa;
 }
 
 nav ul li a:hover {
-	height: 100%;
-	color: crimson;
-}
-
-nav ul li a {
-	color: #fafafa;
+	color: lightseagreen;
 }
 
 nav ul li {
@@ -89,7 +85,7 @@ footer {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	color: #ffffff;
+	color: #fafafa;
 }
 
 footer p {
@@ -152,10 +148,7 @@ nav a img {
 	text-align: center;
 }
 
-#section__third a:hover div p {
-	color: lightseagreen;
-}
-
+#section__third a:hover div p,
 #section__third a:hover div span {
 	color: lightseagreen;
 }
@@ -163,7 +156,6 @@ nav a img {
 #section__third a:hover div svg {
 	fill: lightseagreen;
 }
-
 
 section + h3 {
 	margin: 100px;
