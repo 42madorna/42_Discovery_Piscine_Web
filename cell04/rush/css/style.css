@@ -36,6 +36,10 @@ body {
 	scroll-behavior: smooth;
 }
 
+h1 {
+	font-size: 2.5em;
+}
+
 nav {
 	background: var(--navbar-background);
 	width: 100%;
@@ -109,7 +113,7 @@ nav a img {
 }
 
 #section__first h1,
-#section__first h3 {
+#section__first h2 {
 	text-align: center;
 }
 
